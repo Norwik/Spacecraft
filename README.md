@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/assets/logo.png?v=1.0.0" width="200" />
+    <img src="/assets/logo.png?v=1.0.1" width="200" />
     <h3 align="center">Spacecraft</h3>
     <p align="center">Helmet Example (Docker Compose)</p>
     <p align="center">
