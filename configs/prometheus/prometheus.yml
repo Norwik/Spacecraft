@@ -1,0 +1,21 @@
+# my global config
+global:
+  evaluation_interval: 15s
+  scrape_interval: 15s
+rule_files: ~
+scrape_configs:
+  -
+    job_name: prometheus
+    scrape_interval: 5s
+    static_configs:
+      -
+        targets:
+          - "localhost:9090"
+  -
+    job_name: helmet
+    metrics_path: /metrics
+    scrape_interval: 5s
+    static_configs:
+      -
+        targets:
+          - "helmet:8000"

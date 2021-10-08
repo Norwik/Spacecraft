@@ -1,0 +1,33 @@
+# App configs
+app:
+  # App name
+  name: ${APP_NAME:-orders}
+  # Env mode (dev or prod)
+  mode: ${APP_MODE:-prod}
+  # HTTP port
+  port: ${API_PORT:-8002}
+  # Hostname
+  hostname: ${API_HOSTNAME:-127.0.0.1}
+  # TLS configs
+  tls:
+    status: ${API_TLS_STATUS:-off}
+    crt_path: ${API_TLS_PEMPATH:-cert/server.crt}
+    key_path: ${API_TLS_KEYPATH:-cert/server.key}
+
+  # Global timeout
+  timeout: ${API_TIMEOUT:-50}
+
+  # APIGW Configs
+  apigw:
+    url: ${API_APIGW_URL:-http://helmet:8000}
+    client_id: ${API_APIGW_CLIENT_ID:-orders_microservice.spacewalkio}
+    client_secret: ${API_APIGW_CLIENT_SECRET:-4a0d4910-e902-432e-9f53-fad719a3d224}
+
+  # Log configs
+  log:
+    # Log level, it can be debug, info, warn, error, panic, fatal
+    level: ${LOG_LEVEL:-info}
+    # Output can be stdout or abs path to log file /var/logs/orders.log
+    output: ${LOG_OUTPUT:-stdout}
+    # Format can be json
+    format: ${LOG_FORMAT:-json}

@@ -1,0 +1,105 @@
+# App configs
+app:
+    # App name
+    name: ${HELMET_APP_NAME:-helmet}
+    # Env mode (dev or prod)
+    mode: ${HELMET_APP_MODE:-prod}
+    # HTTP port
+    port: ${HELMET_API_PORT:-8000}
+    # Hostname
+    hostname: ${HELMET_API_HOSTNAME:-127.0.0.1}
+    # TLS configs
+    tls:
+        status: ${HELMET_API_TLS_STATUS:-off}
+        crt_path: ${HELMET_API_TLS_PEMPATH:-cert/server.crt}
+        key_path: ${HELMET_API_TLS_KEYPATH:-cert/server.key}
+
+    # Global timeout
+    timeout: ${HELMET_API_TIMEOUT:-50}
+
+    # API Configs
+    api:
+        key: ${HELMET_API_KEY:-6c68b836-6f8e-465e-b59f-89c1db53afca}
+
+    # CORS status
+    cors:
+        status: ${HELMET_CORS_STATUS:-off}
+
+    # Application Database
+    database:
+        # Database driver (sqlite3, mysql)
+        driver: ${HELMET_DATABASE_DRIVER:-mysql}
+        # Database Host
+        host: ${HELMET_DATABASE_MYSQL_HOST:-database}
+        # Database Port
+        port: ${HELMET_DATABASE_MYSQL_PORT:-3306}
+        # Database Name
+        name: ${HELMET_DATABASE_MYSQL_DATABASE:-helmet}
+        # Database Username
+        username: ${HELMET_DATABASE_MYSQL_USERNAME:-helmet}
+        # Database Password
+        password: ${HELMET_DATABASE_MYSQL_PASSWORD:-helmet}
+
+    # Key Store Configs
+    key_store:
+        # Cache Driver
+        driver: ${HELMET_KV_DRIVER:-redis}
+        # Redis Driver Configs
+        redis:
+            # Redis Address
+            address: ${HELMET_KV_REDIS_ADDR:-redis:6379}
+            # Redis Password
+            password: ${HELMET_KV_REDIS_PASSWORD:-}
+            # Redis Database
+            database: ${HELMET_KV_REDIS_DB:-0}
+
+    # Endpoint Configs
+    endpoint:
+        # Orders Internal Service
+        - name: orders_service
+          active: true
+          proxy:
+            listen_path: "/orders/v1/*"
+            upstreams:
+                balancing: roundrobin
+                targets:
+                    - target: http://orders:8002/api/v1
+            http_methods:
+                - ANY
+            authentication:
+                status: on
+            # Rate limit use the key store for fast read write
+            rate_limit:
+                status: off
+            # Circuit Breaker use the key store for fast read write
+            circuit_breaker:
+                status: off
+
+        # Customers Internal Service
+        - name: customers_service
+          active: true
+          proxy:
+            listen_path: "/customers/v1/*"
+            upstreams:
+                balancing: random
+                targets:
+                    - target: http://customers:8001/api/v1
+            http_methods:
+                - GET
+            authentication:
+                status: on
+            # Rate limit use the key store for fast read write
+            rate_limit:
+                status: off
+            # Circuit Breaker use the key store for fast read write
+            circuit_breaker:
+                status: off
+
+    # Log configs
+    log:
+        # Log level, it can be debug, info, warn, error, panic, fatal
+        level: ${HELMET_LOG_LEVEL:-info}
+        # Output can be stdout or abs path to log file /var/logs/helmet.log
+        output: ${HELMET_LOG_OUTPUT:-stdout}
+        # Format can be json
+        format: ${HELMET_LOG_FORMAT:-json}
