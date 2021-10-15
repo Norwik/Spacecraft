@@ -1,7 +1,7 @@
 <p align="center">
     <img src="/assets/logo.png?v=1.0.1" width="200" />
     <h3 align="center">Spacecraft</h3>
-    <p align="center">Helmet Example (Docker Compose)</p>
+    <p align="center">Helmet getting started example with docker compose.</p>
     <p align="center">
         <a href="https://github.com/spacewalkio/spacecraft/blob/master/LICENSE">
             <img src="https://img.shields.io/badge/LICENSE-MIT-E74C3C.svg">
