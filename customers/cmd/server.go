@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/clevenio/spacecraft/customers/core/controller"
-	"github.com/clevenio/spacecraft/customers/core/service"
+	"github.com/norwik/spacecraft/customers/core/controller"
+	"github.com/norwik/spacecraft/customers/core/service"
 
 	"github.com/drone/envsubst"
 	"github.com/labstack/echo-contrib/prometheus"

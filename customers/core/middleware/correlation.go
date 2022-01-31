@@ -7,7 +7,7 @@ package middleware
 import (
 	"strings"
 
-	"github.com/clevenio/spacecraft/customers/core/service"
+	"github.com/norwik/spacecraft/customers/core/service"
 
 	"github.com/labstack/echo/v4"
 )
