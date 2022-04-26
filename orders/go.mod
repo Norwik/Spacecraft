@@ -1,4 +1,4 @@
-module github.com/spacewalkio/spacecraft/orders
+module github.com/clevenio/spacecraft/orders
 
 go 1.17
 

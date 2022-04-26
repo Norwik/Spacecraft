@@ -7,7 +7,7 @@ package middleware
 import (
 	"strings"
 
-	"github.com/spacewalkio/spacecraft/orders/core/service"
+	"github.com/clevenio/spacecraft/orders/core/service"
 
 	"github.com/labstack/echo/v4"
 )

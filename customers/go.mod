@@ -1,4 +1,4 @@
-module github.com/spacewalkio/spacecraft/customers
+module github.com/clevenio/spacecraft/customers
 
 go 1.17
 

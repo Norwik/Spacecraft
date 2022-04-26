@@ -3,7 +3,7 @@
     <h3 align="center">Spacecraft</h3>
     <p align="center">Helmet getting started example with docker compose.</p>
     <p align="center">
-        <a href="https://github.com/spacewalkio/spacecraft/blob/master/LICENSE">
+        <a href="https://github.com/clevenio/spacecraft/blob/master/LICENSE">
             <img src="https://img.shields.io/badge/LICENSE-MIT-E74C3C.svg">
         </a>
     </p>
@@ -72,12 +72,12 @@ Create Oauth credentials for orders microservice
 $ curl -X POST \
     http://127.0.0.1:8000/apigw/api/v1/auth/oauth \
     -H 'X-API-KEY: 6c68b836-6f8e-465e-b59f-89c1db53afca' \
-    -d '{"name": "orders_microservice","clientID": "orders_microservice.spacewalkio","clientSecret": "4a0d4910-e902-432e-9f53-fad719a3d224","meta": "name=orders;entity=emea","authMethodID":1}' | jq .
+    -d '{"name": "orders_microservice","clientID": "orders_microservice.clevenio","clientSecret": "4a0d4910-e902-432e-9f53-fad719a3d224","meta": "name=orders;entity=emea","authMethodID":1}' | jq .
 
 {
   "id": 1,
   "name": "orders_microservice",
-  "clientID": "orders_microservice.spacewalkio",
+  "clientID": "orders_microservice.clevenio",
   "clientSecret": "4a0d4910-e902-432e-9f53-fad719a3d224",
   "meta": "name=orders;entity=emea",
   "authMethodID": 1,
@@ -124,12 +124,12 @@ $ docker-compose down
 
 For transparency into our release cycle and in striving to maintain backward compatibility, Spacecraft is maintained under the [Semantic Versioning guidelines](https://semver.org/) and release process is predictable and business-friendly.
 
-See the [Releases section of our GitHub project](https://github.com/spacewalkio/spacecraft/releases) for changelogs for each release version of Spacecraft. It contains summaries of the most noteworthy changes made in each release.
+See the [Releases section of our GitHub project](https://github.com/clevenio/spacecraft/releases) for changelogs for each release version of Spacecraft. It contains summaries of the most noteworthy changes made in each release.
 
 
 ## Bug tracker
 
-If you have any suggestions, bug reports, or annoyances please report them to our issue tracker at https://github.com/spacewalkio/spacecraft/issues
+If you have any suggestions, bug reports, or annoyances please report them to our issue tracker at https://github.com/clevenio/spacecraft/issues
 
 
 ## Security Issues
@@ -146,4 +146,4 @@ We are an open source, community-driven project so please feel free to join us. 
 
 © 2021, SpaceWalk. Released under [MIT License](https://opensource.org/licenses/mit-license.php).
 
-**Spacecraft** is authored and maintained by [@SpaceWalk](http://github.com/spacewalkio).
+**Spacecraft** is authored and maintained by [@SpaceWalk](http://github.com/clevenio).

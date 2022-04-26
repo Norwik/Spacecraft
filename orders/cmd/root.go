@@ -18,7 +18,7 @@ var rootCmd = &cobra.Command{
 	Short: `🐺 Orders Microservice
 
 If you have any suggestions, bug reports, or annoyances please report
-them to our issue tracker at <https://github.com/spacewalkio/spacecraft/issues>`,
+them to our issue tracker at <https://github.com/clevenio/spacecraft/issues>`,
 }
 
 // Execute runs cmd tool

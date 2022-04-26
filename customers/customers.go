@@ -5,7 +5,7 @@
 package main
 
 import (
-	"github.com/spacewalkio/spacecraft/customers/cmd"
+	"github.com/clevenio/spacecraft/customers/cmd"
 )
 
 var (

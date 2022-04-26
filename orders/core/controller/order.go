@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/spacewalkio/spacecraft/orders/core/service"
+	"github.com/clevenio/spacecraft/orders/core/service"
 
 	"github.com/labstack/echo/v4"
 	"github.com/spf13/viper"
