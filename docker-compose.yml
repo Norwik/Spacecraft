@@ -4,7 +4,7 @@ services:
 
   # Helmet API Gateway Container
   helmet:
-    image: 'ghcr.io/spacewalkio/helmet/helmet:1.0.16'
+    image: 'ghcr.io/spacewalkio/helmet/helmet:1.0.23'
     ports:
       - '8000:8000'
     command: /app/helmet server -c /app/configs/helmet.yml
