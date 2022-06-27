@@ -24,7 +24,7 @@ services:
 
   # Redis Container
   redis:
-    image: 'redis:6.2-alpine'
+    image: 'redis:7.0-alpine'
     volumes:
       - 'redis_data:/data'
     restart: unless-stopped
