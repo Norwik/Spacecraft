@@ -77,7 +77,7 @@ services:
 
   # Grafana Container
   grafana:
-    image: 'grafana/grafana:9.3.4'
+    image: 'grafana/grafana:9.3.6'
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
