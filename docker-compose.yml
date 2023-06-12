@@ -4,7 +4,7 @@ services:
 
   # Helmet API Gateway Container
   helmet:
-    image: 'ghcr.io/norwik/helmet/helmet:1.0.25'
+    image: 'ghcr.io/norwik/helmet/helmet:1.0.26'
     ports:
       - '8000:8000'
     command: /app/helmet server -c /app/configs/helmet.yml
