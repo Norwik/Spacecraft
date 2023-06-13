@@ -196,6 +196,8 @@ github.com/labstack/echo-contrib v0.14.0 h1:tVHJjhqOcB183bzAeNDVwKgf1GWRAM6k9PvI
 github.com/labstack/echo-contrib v0.14.0/go.mod h1:0tmJZUHWLU7zGvMoxZwotRxHgUqBfW37T6bHg17SgAw=
 github.com/labstack/echo-contrib v0.14.1 h1:oNUSCeXQOlCGt3eWafzu0mkXjIh3SINnYgE/UR2kYXQ=
 github.com/labstack/echo-contrib v0.14.1/go.mod h1:6jgpHPjGRk0qrysPCfv3SCau6kewjQtYzOk1fLZGMeQ=
+github.com/labstack/echo-contrib v0.15.0 h1:9K+oRU265y4Mu9zpRDv3X+DGTqUALY6oRHCSZZKCRVU=
+github.com/labstack/echo-contrib v0.15.0/go.mod h1:lei+qt5CLB4oa7VHTE0yEfQSEB9XTJI1LUqko9UWvo4=
 github.com/labstack/echo/v4 v4.7.2 h1:Kv2/p8OaQ+M6Ex4eGimg9b9e6icoxA42JSlOR3msKtI=
 github.com/labstack/echo/v4 v4.7.2/go.mod h1:xkCDAdFCIf8jsFQ5NnbK7oqaF/yU1A1X20Ltm0OvSks=
 github.com/labstack/echo/v4 v4.9.0 h1:wPOF1CE6gvt/kmbMR4dGzWvHMPT+sAEUJOwOTtvITVY=
