@@ -65,7 +65,7 @@ services:
 
   # Prometheus Container
   prometheus:
-    image: 'prom/prometheus:v2.46.0'
+    image: 'prom/prometheus:v2.54.1'
     volumes:
       - './configs/prometheus:/etc/prometheus'
     command: '--config.file=/etc/prometheus/prometheus.yml'
