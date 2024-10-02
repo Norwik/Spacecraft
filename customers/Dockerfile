@@ -1,4 +1,4 @@
-FROM golang:1.20.7 as build
+FROM golang:1.23.2 as build
 
 RUN mkdir -p /app
 RUN apt-get update
@@ -9,7 +9,7 @@ COPY ./ ./
 
 RUN go build -v -ldflags="-X 'main.version=v1.0.0'" customers.go
 
-FROM golang:1.20.7
+FROM golang:1.23.2
 
 ENV GO111MODULE=on
 
